@@ -1,0 +1,46 @@
+.tic-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 320px;
+}
+.tic-board button {
+  font-size: 2em;
+  height: 100px;
+}
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+  margin: 20px auto;
+}
+.memory-board button {
+  font-size: 2em;
+  height: 60px;
+}
+.tile {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+.mole-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.mole-hole {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  background-color: #444;
+  color: white;
+  border-radius: 50%;
+}
+

@@ -1,12 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Memory Game</title>
-  <link rel="stylesheet" href="../styles/game-style.css">
-  <script defer src="../scripts/memory.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memory Game</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Your CSS -->
+<link rel="stylesheet" href="../styles/game-style.css">
+
+<!-- JS -->
+<script defer src="../scripts/memory.js"></script>
+
 </head>
-<body>
-  <h1>Memory Game</h1>
-  <div id="memory-board" class="memory-board"></div>
+
+<body class="bg-dark text-white text-center">
+
+<div class="container mt-5">
+
+<h1 class="mb-4">🧠 Memory Game</h1>
+
+<!-- SCOREBOARD -->
+
+<div class="row justify-content-center g-3 mb-4">
+
+<div class="col-md-2 col-4">
+<div class="card bg-success text-white">
+<div class="card-body">
+<h6>Moves</h6>
+<h3 id="moves">0</h3>
+</div>
+</div>
+</div>
+
+<div class="col-md-2 col-4">
+<div class="card bg-warning text-dark">
+<div class="card-body">
+<h6>High Score</h6>
+<h3 id="highscore">0</h3>
+</div>
+</div>
+</div>
+
+<div class="col-md-2 col-4">
+<div class="card bg-info text-dark">
+<div class="card-body">
+<h6>Time</h6>
+<h3 id="timer">0</h3>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- GAME BOARD -->
+
+<div id="memory-board" class="memory-board"></div>
+
+<!-- WIN MESSAGE -->
+
+<div id="winMessage" class="mt-4 fs-3 text-success"></div>
+
+<!-- BUTTONS -->
+
+<div class="mt-4">
+
+<button class="btn btn-success me-2" onclick="restartGame()">
+🔄 Restart
+</button>
+
+<a href="../index.html" class="btn btn-primary">
+🎮 Back to Arcade
+</a>
+
+</div>
+
+</div>
+
 </body>
 </html>

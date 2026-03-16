@@ -1,19 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mini Games Arcade</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mini Games Arcade</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Your CSS -->
+<link rel="stylesheet" href="style.css">
+
 </head>
-<body>
-  <h1>🎮 Mini Games Arcade</h1>
-  <div class="game-grid">
-    <a href="games/tictactoe.html">🟦 Tic Tac Toe</a>
-    <a href="games/memory.html">🧠 Memory Game</a>
-    <a href="games/snake.html">🐍 Snake</a>
-    <a href="games/rps.html">✊📄✂️ Rock Paper Scissors</a>
-    <a href="games/mole.html">🐹 Whack a Mole</a>
-    <a href="games/2048.html">🔢 2048</a>
-  </div>
+
+<body class="bg-dark text-white">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow">
+<div class="container">
+
+<a class="navbar-brand fw-bold">🎮 Mini Games Arcade</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#games">Games</a>
+</li>
+
+</ul>
+</div>
+
+</div>
+</nav>
+
+
+<!-- Hero Section -->
+<div class="container text-center mt-5">
+
+<h1 class="display-4">🎮 Mini Games Arcade</h1>
+
+<p class="lead">Play fun browser games instantly!</p>
+
+</div>
+
+
+<!-- Games Section -->
+<div class="container mt-5" id="games">
+
+<div class="row g-4">
+
+<!-- Tic Tac Toe -->
+<div class="col-md-4">
+<div class="card bg-secondary text-white shadow game-card">
+<div class="card-body text-center">
+<h4>🟦 Tic Tac Toe</h4>
+<a href="games/tictactoe.html" class="btn btn-primary mt-3">Play Game</a>
+</div>
+</div>
+</div>
+
+<!-- Memory Game -->
+<div class="col-md-4">
+<div class="card bg-secondary text-white shadow game-card">
+<div class="card-body text-center">
+<h4>🧠 Memory Game</h4>
+<a href="games/memory.html" class="btn btn-info mt-3">Play Game</a>
+</div>
+</div>
+</div>
+
+<!-- Snake -->
+<div class="col-md-4">
+<div class="card bg-secondary text-white shadow game-card">
+<div class="card-body text-center">
+<h4>🐍 Snake</h4>
+<a href="games/snake.html" class="btn btn-success mt-3">Play Game</a>
+</div>
+</div>
+</div>
+
+<!-- Rock Paper Scissors -->
+<div class="col-md-4">
+<div class="card bg-secondary text-white shadow game-card">
+<div class="card-body text-center">
+<h4>✊📄✂️ Rock Paper Scissors</h4>
+<a href="games/rps.html" class="btn btn-warning mt-3">Play Game</a>
+</div>
+</div>
+</div>
+
+<!-- Whack a Mole -->
+<div class="col-md-4">
+<div class="card bg-secondary text-white shadow game-card">
+<div class="card-body text-center">
+<h4>🐹 Whack a Mole</h4>
+<a href="games/mole.html" class="btn btn-danger mt-3">Play Game</a>
+</div>
+</div>
+</div>
+
+<!-- 2048 -->
+<div class="col-md-4">
+<div class="card bg-secondary text-white shadow game-card">
+<div class="card-body text-center">
+<h4>🔢 2048</h4>
+<a href="games/2048.html" class="btn btn-dark mt-3">Play Game</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="text-center mt-5 p-3 bg-black">
+<p>© 2026 Mini Games Arcade | Built with HTML CSS JS</p>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

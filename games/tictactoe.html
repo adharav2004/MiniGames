@@ -1,17 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Tic Tac Toe</title>
-  <link rel="stylesheet" href="../styles/game-style.css">
-  <script defer src="../scripts/tictactoe.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tic Tac Toe</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Game Styles -->
+<link rel="stylesheet" href="../styles/game-style.css">
+
+<script defer src="../scripts/tictactoe.js"></script>
+
+<style>
+
+.tic-board{
+display:grid;
+grid-template-columns:repeat(3,120px);
+gap:10px;
+justify-content:center;
+margin:auto;
+}
+
+.tic-board button{
+width:120px;
+height:120px;
+font-size:40px;
+font-weight:bold;
+border-radius:10px;
+border:none;
+background:#222;
+color:white;
+transition:0.2s;
+}
+
+.tic-board button:hover{
+background:#333;
+}
+
+</style>
+
 </head>
-<body>
-  <h1>Tic Tac Toe</h1>
-  <div id="board" class="tic-board">
-    <button></button><button></button><button></button>
-    <button></button><button></button><button></button>
-    <button></button><button></button><button></button>
-  </div>
-  <p id="status">Player X's Turn</p>
+
+<body class="bg-dark text-white">
+
+<div class="container text-center mt-5 game-container">
+
+<h1 class="mb-4 display-5">❌⭕ Tic Tac Toe</h1>
+
+<!-- Scoreboard -->
+<div class="row justify-content-center mb-4">
+
+<div class="col-md-2 col-6 mb-2">
+<div class="card bg-primary text-white shadow">
+<div class="card-body">
+<h6>Player X</h6>
+<h3 id="scoreX">0</h3>
+</div>
+</div>
+</div>
+
+<div class="col-md-2 col-6 mb-2">
+<div class="card bg-danger text-white shadow">
+<div class="card-body">
+<h6>Player O</h6>
+<h3 id="scoreO">0</h3>
+</div>
+</div>
+</div>
+
+<div class="col-md-2 col-6 mb-2">
+<div class="card bg-info text-dark shadow">
+<div class="card-body">
+<h6>Draws</h6>
+<h3 id="draws">0</h3>
+</div>
+</div>
+</div>
+
+<div class="col-md-2 col-6 mb-2">
+<div class="card bg-warning text-dark shadow">
+<div class="card-body">
+<h6>High Score</h6>
+<h3 id="highScore">0</h3>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- Game Mode -->
+<div class="mb-4">
+
+<label class="form-label">Game Mode</label>
+
+<select id="modeSelect" class="form-select w-25 mx-auto">
+
+<option value="pvp">Player vs Player</option>
+<option value="ai">Player vs Computer</option>
+
+</select>
+
+</div>
+
+<!-- Game Board -->
+<div id="board" class="tic-board">
+
+<button></button>
+<button></button>
+<button></button>
+
+<button></button>
+<button></button>
+<button></button>
+
+<button></button>
+<button></button>
+<button></button>
+
+</div>
+
+<!-- Game Status -->
+<h4 id="status" class="mt-4">Player X's Turn</h4>
+
+<!-- Buttons -->
+<div class="mt-4">
+
+<button class="btn btn-success me-2" onclick="restartGame()">Restart Round</button>
+
+<button class="btn btn-danger me-2" onclick="resetScores()">Reset Scores</button>
+
+<a href="../index.html" class="btn btn-secondary">⬅ Back to Arcade</a>
+
+</div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>

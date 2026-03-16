@@ -1,46 +1,141 @@
-.tic-board {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  gap: 10px;
-  margin: 20px auto;
-  max-width: 320px;
-}
-.tic-board button {
-  font-size: 2em;
-  height: 100px;
-}
-.memory-board {
-  display: grid;
-  grid-template-columns: repeat(4, 60px);
-  gap: 10px;
-  margin: 20px auto;
-}
-.memory-board button {
-  font-size: 2em;
-  height: 60px;
-}
-.tile {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 24px;
-}
-.mole-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 80px);
-  gap: 15px;
-  justify-content: center;
-  margin-top: 20px;
-}
-.mole-hole {
-  width: 80px;
-  height: 80px;
-  font-size: 2rem;
-  background-color: #444;
-  color: white;
-  border-radius: 50%;
+/* General Game Container */
+
+.game-container{
+text-align:center;
+margin-top:40px;
 }
 
+
+/* Tic Tac Toe */
+
+.tic-board{
+display:grid;
+grid-template-columns:repeat(3,100px);
+gap:10px;
+margin:20px auto;
+max-width:320px;
+}
+
+.tic-board button{
+font-size:2em;
+height:100px;
+border-radius:10px;
+border:none;
+background:#333;
+color:white;
+cursor:pointer;
+transition:0.2s;
+}
+
+.tic-board button:hover{
+background:#555;
+transform:scale(1.05);
+}
+
+
+/* Memory Game */
+
+.memory-board{
+display:grid;
+grid-template-columns:repeat(4,70px);
+gap:10px;
+margin:20px auto;
+justify-content:center;
+}
+
+.memory-board button{
+font-size:1.8em;
+height:70px;
+border-radius:8px;
+border:none;
+background:#333;
+color:white;
+cursor:pointer;
+transition:0.2s;
+}
+
+.memory-board button:hover{
+background:#555;
+}
+
+
+/* 2048 Tiles */
+
+.tile{
+width:80px;
+height:80px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:bold;
+font-size:24px;
+border-radius:8px;
+background:#444;
+color:white;
+}
+
+
+/* Whack a Mole */
+
+.mole-grid{
+display:grid;
+grid-template-columns:repeat(4,90px);
+gap:15px;
+justify-content:center;
+margin-top:20px;
+}
+
+.mole-hole{
+width:90px;
+height:90px;
+font-size:2rem;
+background:#333;
+color:white;
+border-radius:50%;
+border:none;
+cursor:pointer;
+transition:0.2s;
+}
+
+.mole-hole:hover{
+background:#555;
+transform:scale(1.05);
+}
+
+
+/* Responsive for Mobile */
+
+@media(max-width:600px){
+
+.tic-board{
+grid-template-columns:repeat(3,80px);
+}
+
+.tic-board button{
+height:80px;
+}
+
+.memory-board{
+grid-template-columns:repeat(4,55px);
+}
+
+.memory-board button{
+height:55px;
+}
+
+.tile{
+width:60px;
+height:60px;
+font-size:18px;
+}
+
+.mole-grid{
+grid-template-columns:repeat(3,70px);
+}
+
+.mole-hole{
+width:70px;
+height:70px;
+}
+
+}

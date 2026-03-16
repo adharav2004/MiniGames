@@ -1,14 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>2048</title>
-  <link rel="stylesheet" href="game-style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2048 Game</title>
+
+<!-- Bootstrap -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Game CSS -->
+
+<link rel="stylesheet" href="../styles/game-style.css">
+
+<style>
+
+body{
+background:#111;
+color:white;
+text-align:center;
+}
+
+.grid-2048{
+display:grid;
+grid-template-columns:repeat(4,90px);
+gap:10px;
+justify-content:center;
+margin-top:20px;
+}
+
+.tile{
+width:90px;
+height:90px;
+background:#333;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:bold;
+border-radius:10px;
+}
+
+</style>
+
 </head>
+
 <body>
-  <h2>2048 Game</h2>
-  <div id="game2048" class="grid-2048"></div>
-  <p>Use arrow keys to move.</p>
-  <script src="2048.js"></script>
+
+<div class="container mt-5">
+
+<h1 class="mb-4">🔢 2048 Game</h1>
+
+<!-- Scoreboard -->
+
+<div class="row justify-content-center mb-4">
+
+<div class="col-md-2 col-6 mb-2">
+<div class="card bg-success text-white">
+<div class="card-body">
+<h6>Score</h6>
+<h3 id="score">0</h3>
+</div>
+</div>
+</div>
+
+<div class="col-md-2 col-6 mb-2">
+<div class="card bg-warning text-dark">
+<div class="card-body">
+<h6>Best</h6>
+<h3 id="bestScore">0</h3>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- Game Grid -->
+
+<div id="game2048" class="grid-2048"></div>
+
+<!-- Controls -->
+
+<div class="mt-4">
+
+<button class="btn btn-success me-2" onclick="restartGame()">
+🔄 Restart
+</button>
+
+<a href="../index.html" class="btn btn-secondary">
+⬅ Back to Arcade
+</a>
+
+</div>
+
+<!-- Instructions -->
+
+<p class="mt-4 text-light">
+Use ⬅ ➡ ⬆ ⬇ arrow keys to move tiles and combine numbers to reach <strong>2048</strong>.
+</p>
+
+</div>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Game Script -->
+
+<script src="../scripts/2048.js"></script>
+
 </body>
+
 </html>
